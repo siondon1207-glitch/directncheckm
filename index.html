@@ -1,23 +1,879 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+
+  <!-- JSON-LD Structured Data for Google/Naver AI & LLM Search Optimization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "2026 랜드로버 디스커버리 (Land Rover Discovery)",
+    "image": "https://car.reliabledone.com/images/discovery-2026.jpg",
+    "description": "2026년형 랜드로버 올 뉴 디스커버리 및 디스커버리 스포츠 모델별 공식 가격표, 취등록세, 모의견적, 장기렌트 및 리스 할인 프로모션 분석 정보 제공.",
+    "brand": {
+      "@type": "Brand",
+      "name": "랜드로버 (Land Rover)"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "KRW",
+      "lowPrice": "76900000",
+      "highPrice": "139800000",
+      "offerCount": "6",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "2026 랜드로버 디스커버리 스포츠 P250 S",
+          "price": "76900000",
+          "priceCurrency": "KRW",
+          "url": "https://car.reliabledone.com/discovery-sport"
+        },
+        {
+          "@type": "Offer",
+          "name": "2026 랜드로버 디스커버리 스포츠 P250 Landmark",
+          "price": "81100000",
+          "priceCurrency": "KRW",
+          "url": "https://car.reliabledone.com/discovery-sport"
+        },
+        {
+          "@type": "Offer",
+          "name": "2026 랜드로버 올 뉴 디스커버리 P300 S",
+          "price": "99500000",
+          "priceCurrency": "KRW",
+          "url": "https://car.reliabledone.com/discovery-5"
+        },
+        {
+          "@type": "Offer",
+          "name": "2026 랜드로버 올 뉴 디스커버리 D350 Dynamic HSE",
+          "price": "130700000",
+          "priceCurrency": "KRW",
+          "url": "https://car.reliabledone.com/discovery-5"
+        },
+        {
+          "@type": "Offer",
+          "name": "2026 랜드로버 올 뉴 디스커버리 P360 Dynamic HSE",
+          "price": "133600000",
+          "priceCurrency": "KRW",
+          "url": "https://car.reliabledone.com/discovery-5"
+        },
+        {
+          "@type": "Offer",
+          "name": "2026 랜드로버 올 뉴 디스커버리 P360 Tempest Edition",
+          "price": "139800000",
+          "priceCurrency": "KRW",
+          "url": "https://car.reliabledone.com/discovery-5"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Google Fonts for Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Style Sheets - Warm, Luxurious Sage Green & Soft Gold Aesthetics -->
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f7f5;
+      color: #2c3330;
+      line-height: 1.8;
+      letter-spacing: -0.02em;
+    }
+    header, section, footer {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 40px;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(15, 59, 46, 0.05);
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    header {
+      border-top: 6px solid #0f3b2e;
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+    h1 {
+      font-size: 2.6rem;
+      color: #0f3b2e;
+      font-weight: 900;
+      margin-top: 0;
+      letter-spacing: -0.04em;
+      line-height: 1.35;
+    }
+    h2 {
+      font-size: 1.9rem;
+      color: #0f3b2e;
+      font-weight: 800;
+      margin-top: 1.8em;
+      border-bottom: 2px solid #e8f0ec;
+      padding-bottom: 12px;
+    }
+    h3 {
+      font-size: 1.45rem;
+      color: #1a4a3c;
+      font-weight: 700;
+      margin-top: 1.5em;
+      margin-bottom: 0.8em;
+    }
+    p, li {
+      font-size: 1.08rem;
+      color: #4a5450;
+      margin-bottom: 1.2em;
+      text-align: justify;
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-left: 0;
+      list-style: none;
+      border-bottom: 2px solid #0f3b2e;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #0f3b2e;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background-color: #f0f4f2;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      background-color: #0f3b2e;
+      color: #ffffff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      font-size: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+    th, td {
+      border: 1px solid #e2ece8;
+      padding: 18px;
+      text-align: left;
+    }
+    th {
+      background-color: #0f3b2e;
+      color: white;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    td {
+      background-color: #ffffff;
+    }
+    tr:nth-child(even) td {
+      background-color: #f8faf9;
+    }
+    
+    /* Elegant Grid Layout for Forms and Info Cards */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin: 30px 0;
+    }
+    .info-card {
+      background: #fcfdfc;
+      border: 1px solid #e1ebe6;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+    }
+    .info-card h3 {
+      margin-top: 0;
+      color: #0f3b2e;
+    }
+
+    /* Calculator & Dynamic Input Section Styling */
+    .calculator-box {
+      background: #eef4f1;
+      border-left: 6px solid #d1a153;
+      padding: 30px;
+      margin: 35px 0;
+      border-radius: 4px 12px 12px 4px;
+    }
+    .calculator-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #0f3b2e;
+      margin-bottom: 20px;
+    }
+    .input-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .input-group {
+      flex: 1 1 calc(50% - 10px);
+      display: flex;
+      flex-direction: column;
+    }
+    .input-group.full-width {
+      flex: 1 1 100%;
+    }
+    label {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #2c3330;
+      font-size: 0.95rem;
+    }
+    input[type="text"], input[type="number"], input[type="tel"], input[type="email"], select, textarea {
+      padding: 14px;
+      border: 1.5px solid #c9d6d0;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      background-color: #ffffff;
+      color: #2c3330;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #0f3b2e;
+      box-shadow: 0 0 8px rgba(15, 59, 70, 0.15);
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+    
+    /* Call to Action Button */
+    button.cta-btn {
+      background-color: #0f3b2e;
+      color: #ffffff;
+      padding: 18px 36px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    button.cta-btn:hover {
+      background-color: #1a4a3c;
+      transform: translateY(-2px);
+    }
+    
+    /* Interactive Elements styling */
+    .calc-result {
+      margin-top: 25px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1.5px dashed #0f3b2e;
+    }
+    .calc-result-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+    .calc-result-row.total {
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: #0f3b2e;
+      border-top: 1.5px solid #e1ebe6;
+      padding-top: 15px;
+      margin-top: 10px;
+    }
+
+    /* FAQ Accordion Styling */
+    .faq .item {
+      border-bottom: 1.5px solid #e8f0ec;
+      padding: 20px 0;
+    }
+    .faq .item:last-child {
+      border-bottom: none;
+    }
+    .faq h3 {
+      cursor: pointer;
+      color: #0f3b2e;
+      font-weight: 700;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+    .faq .content {
+      display: none;
+      padding-top: 15px;
+      color: #4a5450;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .faq h3::after {
+      content: '+';
+      font-size: 1.6rem;
+      color: #d1a153;
+      transition: transform 0.3s ease;
+    }
+    .faq h3.active::after {
+      content: '-';
+    }
+
+    /* Keyword and visual highlights */
+    .highlight-text {
+      color: #0f3b2e;
+      font-weight: 800;
+      background: linear-gradient(120deg, rgba(209, 161, 83, 0.15) 0%, rgba(209, 161, 83, 0.2) 100%);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .badge-premium {
+      display: inline-block;
+      background-color: #d1a153;
+      color: #ffffff;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    
+    /* Navigation Link Styles */
+    .external-link {
+      color: #0f3b2e;
+      text-decoration: underline;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+    .external-link:hover {
+      color: #d1a153;
+    }
+    
+    /* Interactive Chart Box */
+    .chart-container {
+      margin: 40px 0;
+      padding: 25px;
+      background-color: #ffffff;
+      border: 1px solid #e1ebe6;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 768px) {
+      body { padding: 15px; }
+      header, section, footer { padding: 25px; margin: 20px auto; }
+      h1 { font-size: 1.95rem; }
+      h2 { font-size: 1.5rem; }
+      nav ul { flex-direction: column; gap: 8px; }
+      .input-group { flex: 1 1 100%; }
+      button.cta-btn { padding: 16px; font-size: 1.1rem; }
+    }
+  </style>
+
+  <!-- jQuery for FAQ Accordion & Live Calculations -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // FAQ Accordion Toggle Action
+      $('.faq .item h3').on('click', function() {
+        var content = $(this).next('.content');
+        $(this).toggleClass('active');
+        content.slideToggle(300);
+      });
+
+      // Price mapping of 2026 Discovery lineup (in KRW)
+      const priceMap = {
+        'sport-p250-s': 76900000,
+        'sport-p250-landmark': 81100000,
+        'all-new-p300-s': 99500000,
+        'all-new-d350-hse': 130700000,
+        'all-new-p360-hse': 133600000,
+        'all-new-p360-tempest': 139800000
+      };
+
+      // Live estimate calculator function
+      function calculateEstimate() {
+        const selectedModel = $('#calc-model').val();
+        const basePrice = priceMap[selectedModel] || 0;
+        const discountInput = parseInt($('#calc-discount').val()) || 0;
+        const downPaymentPercent = parseInt($('#calc-down-payment').val()) || 0;
+        const period = parseInt($('#calc-period').val()) || 36;
+        const rate = parseFloat($('#calc-rate').val()) || 5.5;
+
+        // Apply discount to base price to get real vehicle purchase price
+        const netVehiclePrice = Math.max(0, basePrice - discountInput);
+        
+        // 7% acquisition tax (취등록세) applied to final purchase price
+        const acquisitionTax = Math.round(netVehiclePrice * 0.07);
+        // Estimate other incidental costs (공채 및 대행 수수료 약 1%)
+        const optionalFees = Math.round(netVehiclePrice * 0.01);
+        const totalPurchaseCost = netVehiclePrice + acquisitionTax + optionalFees;
+
+        // Financial parameters
+        const downPaymentAmount = Math.round(netVehiclePrice * (downPaymentPercent / 100));
+        const principal = Math.max(0, netVehiclePrice - downPaymentAmount);
+
+        // Amortized loan calculation for monthly installment
+        let monthlyPayment = 0;
+        if (principal > 0) {
+          const monthlyRate = (rate / 100) / 12;
+          if (monthlyRate === 0) {
+            monthlyPayment = Math.round(principal / period);
+          } else {
+            monthlyPayment = Math.round(principal * (monthlyRate * Math.pow(1 + monthlyRate, period)) / (Math.pow(1 + monthlyRate, period) - 1));
+          }
+        }
+
+        // Format numbers with local currency representation
+        $('#res-base-price').text(basePrice.toLocaleString() + ' 원');
+        $('#res-discount').text(discountInput.toLocaleString() + ' 원');
+        $('#res-net-price').text(netVehiclePrice.toLocaleString() + ' 원');
+        $('#res-tax').text(acquisitionTax.toLocaleString() + ' 원');
+        $('#res-initial-cost').text((downPaymentAmount + acquisitionTax + optionalFees).toLocaleString() + ' 원');
+        $('#res-monthly').text(monthlyPayment.toLocaleString() + ' 원');
+        $('#res-total').text(totalPurchaseCost.toLocaleString() + ' 원');
+      }
+
+      // Handle change events in the calculator form
+      $('#calc-model, #calc-discount, #calc-down-payment, #calc-period, #calc-rate').on('input change', function() {
+        calculateEstimate();
+      });
+
+      // Run initial calculation on load
+      calculateEstimate();
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <span class="badge-premium">2026 Premium SUV Guide</span>
+    <h1><span class="highlight-text">디스커버리 가격</span> 및 2026년형 공식 프로모션 할인 견적 정보</h1>
+    <p>오프로드와 도심을 아우르는 랜드로버의 대표적인 패밀리 SUV 라인업인 2026년형 랜드로버 올 뉴 디스커버리(Discovery 5)와 디스커버리 스포츠(Discovery Sport)의 상세 가격 정보를 안내해 드립니다. 엔진 사양별 공식 출고가와 예상 실구매가, 세금 및 취등록세 계산기, 그리고 장기렌트와 자동차 리스 등 유용한 금융 설계 및 다이렉트 최저가 견적 상담 신청 방법까지 상세히 수록되어 있습니다.</p>
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+      <ul>
+        <li><a href="#intro">디스커버리의 가치</a></li>
+        <li><a href="#price-table">2026 라인업 가격표</a></li>
+        <li><a href="#comparison">모델별 비교분석</a></li>
+        <li><a href="#purchase-guide">최저가 견적 전략</a></li>
+        <li><a href="#calc-section">실구매가 모의 계산기</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+        <li><a href="#consulting">온라인 상담 신청</a></li>
+        <li><a href="#resources">참고자료</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <section id="intro">
+    <h2>1. 2026년형 랜드로버 디스커버리 라인업 시장 동향</h2>
+    <p>영국의 정통 오프로더 브랜드 랜드로버의 중추를 담당해 온 디스커버리는 패밀리 SUV가 지향해야 할 공간감과 다목적 활용성, 그리고 어떠한 지형도 극복할 수 있는 전천후 주행 성능을 동시에 보여줍니다. 2026년형 랜드로버 디스커버리는 세련되게 정제된 내외관 디자인과 차세대 하이테크 편의 장비를 기본 탑재하여 동급 경쟁 차종들 사이에서 높은 경쟁력을 인정받고 있습니다. 현재 국내 프리미엄 SUV 시장에서 올 뉴 디스커버리와 컴팩트 버전인 디스커버리 스포츠는 패밀리카 수요층의 높은 관심을 받고 있습니다.</p>
+    
+    <p>수입 패밀리 SUV 시장에서 차를 선택할 때 구매 예정자들이 가장 핵심적으로 살펴보는 요소는 단연 <span class="highlight-text">디스커버리 가격</span>입니다. 최근 전반적인 원자재 상승과 하이테크 인포테인먼트인 피비 프로(Pivi Pro)의 기능적 개선으로 연식 변경 모델의 기본 출고 가격이 다소 인상되었으나, 공식 딜러사와 수입차 금융 전문 업체의 프로모션 혜택과 비공식 딜러 할인이 결합되면서 소비자들의 접근 장벽이 완화되고 있습니다. 온라인 자동차 커뮤니티인 보배드림이나 디시인사이드 자동차 갤러리, 에펨코리아(펨코)의 수입차 게시판 등에서도 디스커버리의 프로모션 할인 규모와 유지 비용에 관한 문의가 빈번하게 올라오고 있습니다.</p>
+    
+    <p>차량 구매를 계획할 때는 단순히 제조사가 제공하는 권장 소비자 판매 가격만 볼 것이 아니라, 실제 등록 과정에서 발생하는 7%의 취등록세와 공채 매입 비용, 매년 납부하는 자동차세, 다이렉트 자동차 보험료 등을 종합적으로 고려해야 합니다. 또한 할부 이율의 추이와 리스, 장기렌트 등 금융 요금 설계 형태에 따라 최종 납부하는 매달의 월 요금제와 총 지출 금액의 차이점이 매우 크므로 스마트한 견적 비교가 선행되어야 합니다.</p>
+  </section>
+
+  <section id="price-table">
+    <h2>2. 2026년형 디스커버리 모델별 공식 가격표 및 제원</h2>
+    <p>2026년형으로 판매 중인 랜드로버 디스커버리 패밀리의 트림별 상세 판매 가격표 및 핵심 기술 제원 정보입니다. 개별소비세 과세 체계 및 연도별 친환경 혜택 기준의 변화 등을 고려하여 소비자가 실제 마주하는 최종 출고 금액을 일목요연하게 비교해 보실 수 있습니다.</p>
+    
+    <h3>올 뉴 디스커버리 (All New Discovery) 가격 및 제원</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>엔진 및 트림 구분</th>
+          <th>연료 및 구동 방식</th>
+          <th>배기량 및 복합 연비</th>
+          <th>공식 권장 소비자 가격 (MSRP)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P300 S A/T</td>
+          <td>가솔린 2.0L 터보 (4WD)</td>
+          <td>1,997 cc (8.0 km/L)</td>
+          <td>99,500,000 원</td>
+        </tr>
+        <tr>
+          <td>D350 Dynamic HSE</td>
+          <td>디젤 3.0L 마일드 하이브리드 (4WD)</td>
+          <td>2,997 cc (10.1 km/L)</td>
+          <td>130,700,000 원</td>
+        </tr>
+        <tr>
+          <td>P360 Dynamic HSE</td>
+          <td>가솔린 3.0L 마일드 하이브리드 (4WD)</td>
+          <td>2,997 cc (7.5 km/L)</td>
+          <td>133,600,000 원</td>
+        </tr>
+        <tr>
+          <td>P360 Tempest Edition</td>
+          <td>가솔린 3.0L 마일드 하이브리드 (4WD)</td>
+          <td>2,997 cc (7.5 km/L)</td>
+          <td>139,800,000 원</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>디스커버리 스포츠 (New Discovery Sport) 가격 및 제원</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>엔진 및 트림 구분</th>
+          <th>연료 및 구동 방식</th>
+          <th>배기량 및 복합 연비</th>
+          <th>공식 권장 소비자 가격 (MSRP)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P250 S A/T</td>
+          <td>가솔린 2.0L 터보 (4WD)</td>
+          <td>1,997 cc (8.2 km/L)</td>
+          <td>76,900,000 원</td>
+        </tr>
+        <tr>
+          <td>P250 Landmark Edition</td>
+          <td>가솔린 2.0L 터보 (4WD)</td>
+          <td>1,997 cc (8.2 km/L)</td>
+          <td>81,100,000 원</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="info-card">
+      <p><strong>참고사항 및 가격 요인 분석:</strong></p>
+      <p>위 권장 소비자 가격은 제조사 및 수입사인 재규어 랜드로버 코리아의 공식 책정 가격이며, 빌트인 차량 블랙박스, 하이패스 단말기 및 라이프스타일 케어 패키지인 ONE CARE 혜택을 포함하고 있습니다. 연도별 프로모션의 전개 및 개별소비세 감면 정책 변동에 따라 실구매를 위한 현장의 최종 딜러 혜택은 유동적으로 변화합니다. 개별 대리점의 비공식적인 특판 할인이나 카드사 제휴 오토캐시백을 활용하면 표에 기재된 금액 대비 훨씬 유의미한 비용 절감을 이뤄낼 수 있습니다.</p>
+    </div>
+
+    <div class="chart-container">
+      <h3>2026 디스커버리 라인업 모델별 시작 가격 시각화</h3>
+      <canvas id="discoveryPriceChart" width="800" height="350" aria-label="디스커버리 가격 비교 그래프" role="img"></canvas>
+    </div>
+  </section>
+
+  <section id="comparison">
+    <h2>3. 올 뉴 디스커버리 vs 디스커버리 스포츠 완벽 비교분석</h2>
+    <p>랜드로버 디스커버리 브랜드를 탐색 중인 소비자들이 가장 많이 고심하는 부분은 플래그십 대형 패밀리 SUV인 올 뉴 디스커버리(디스커버리 5)와 합리적인 컴팩트 프리미엄 SUV인 디스커버리 스포츠 사이의 명확한 차이점과 장단점입니다. 두 모델의 세부적인 특징을 장단점 위주로 대조해 드리겠습니다.</p>
+    
+    <div class="grid-container">
+      <div class="info-card">
+        <h3>올 뉴 디스커버리 (대형 7인승 SUV)</h3>
+        <p><strong>주요 장점:</strong></p>
+        <ul>
+          <li>성인 7명이 안락하게 장거리 탑승을 할 수 있는 극강의 넓은 실내 공간과 시트 레이아웃 설계</li>
+          <li>에어 서스펜션 장착으로 온로드와 험로 오프로드를 가리지 않는 고급스럽고 편안한 승차감</li>
+          <li>최고 300마력에서 360마력에 달하는 고출력 엔진과 견고한 끄는 힘(최대 견인력 3,500kg)</li>
+          <li>차체 전폭 2,000mm, 전고 1,888mm가 주는 압도적인 헤드룸과 웅장한 도로 위 존재감</li>
+        </ul>
+        <p><strong>주요 단점:</strong></p>
+        <ul>
+          <li>초기 구매 비용이 최저 1억 원에 근접하여 일시불이나 장기 금융 설계 시 심리적 장벽이 높음</li>
+          <li>대형 차체 특성상 도심 좁은 주차 공간이나 구축 아파트 주차장 이용 시 다소 불편함</li>
+          <li>높은 배기량(3,000cc 라인업)으로 인한 연간 자동차세 부담 및 시내 주행 시 연비 소모</li>
+        </ul>
+      </div>
+      
+      <div class="info-card">
+        <h3>디스커버리 스포츠 (중형 5인승 SUV)</h3>
+        <p><strong>주요 장점:</strong></p>
+        <ul>
+          <li>수입 프리미엄 브랜드 SUV 중에서도 합리적인 7천만 원 중후반대의 시작 가격</li>
+          <li>다이내믹한 도심 주행에 어울리는 기동성과 상대적으로 편리한 주차 및 골목길 주행 능력</li>
+          <li>슬라이딩 및 리클라이닝이 지원되는 2열 시트 구성으로 동급 국산 준중형 대비 훌륭한 적재성</li>
+          <li>2.0L 가솔린 엔진 적용으로 저렴한 연간 자동차세 비용과 균형 잡힌 연비 성능</li>
+        </ul>
+        <p><strong>주요 단점:</strong></p>
+        <ul>
+          <li>상위 등급 모델과 달리 에어 서스펜션이 탑재되지 않아 요철 구간 등에서 하부 잔진동 제어가 상대적으로 덜함</li>
+          <li>7인승 옵션 선택이 불가능하여 다인 가족 단위 이동용 패밀리카로는 한계가 있음</li>
+          <li>일반 디스커버리와 비교했을 때 인테리어 소재나 실내 디스플레이 감성 품질이 상대적으로 단조로움</li>
+        </ul>
+      </div>
+    </div>
+    
+    <p>본인의 라이프스타일과 탑승 인원수가 가장 핵심적인 의사 결정 기준이 됩니다. 캠핑, 오토캠핑, 오프로드 아웃도어 스포츠를 주로 즐기며 4인 이상의 가구가 여유로운 레저를 누리려면 공기 현가장치가 선사하는 안락한 승차감의 올 뉴 디스커버리(D350 또는 P360) 모델이 최고의 추천 상품입니다. 반면, 주로 2인에서 3인의 직계가족이 도심 커뮤팅 위주로 주행하며 수입 SUV의 브랜드 헤리티지를 적절한 부담선에서 즐기고자 한다면 디스커버리 스포츠 P250 라인업이 가장 어울리는 실속형 선택지입니다.</p>
+  </section>
+
+  <section id="purchase-guide">
+    <h2>4. 2026년식 디스커버리 구매 채널별 할인 프로모션 혜택 전략</h2>
+    <p>디스커버리를 가장 저렴한곳 혹은 제일 싼곳을 거쳐 성공적으로 구입하려면 온라인 에이전트와 오프라인 전시장을 교차하여 비교 분석하는 치밀함이 필요합니다. 수입차를 현명하게 계약하기 위해 꼭 알아두어야 할 전문 전략과 핵심 팁들을 정리해 전해드립니다.</p>
+
+    <h3>1. 공식 금융 제휴 할인과 다이렉트 리스 및 장기렌트 비교</h3>
+    <p>랜드로버 파이낸셜 등 수입차 브랜드 본사의 전속 금융사 상품을 사용하는 경우 표면적으로는 가장 많은 공식 프로모션 금액을 제공받게 됩니다. 그러나 이러한 공식 금융 상품은 적용 이율이 높아 중장기적으로 이자 비용으로 지불하게 되는 금액이 할인 금액보다 커지는 결과를 낳기도 합니다. 반면, 제휴 금융 에이전시나 다이렉트 신차 금융 어플 및 사이트를 통할 경우 겉으로 드러난 차량 할인액은 적어 보이더라도 최저 금리가 적용되어 종합 실구매 총비용 면에서는 최고 수준의 이득을 얻을 수 있습니다. 장기렌트와 자동차 리스는 사업자 세액 절감 및 건강보험료 상승 배제와 같은 독보적인 장점이 있어 많은 자영업자 및 법인 고객들이 활발히 이용 중입니다.</p>
+
+    <h3>2. 딜러 서비스 사은품 및 비공식 지원금의 실태</h3>
+    <p>신차를 출고할 때 영업사원이 자체 제공하는 사은품 패키지나 현금지원 역시 최종 체감가를 결정짓는 주 요소입니다. 일명 수입차 성지 혹은 특판 좌표라 불리는 수도권 전문 에이전시들은 월말이나 분기 실적을 맞추기 위해 제조사 수수료를 고객에게 양보하는 방식으로 다양한 현금지원 및 추가 상품권 이벤트를 전개하곤 합니다. 다만, 지나치게 과도한 혜택을 제시하며 터무니없이 높은 선수금을 먼저 온라인 비대면으로 송금하도록 요구하는 무등록 에이전트나 카카오톡, 텔레그램 채팅방 형태의 불법 중개 업체는 금융 사고 위험이 있으므로, 반드시 신뢰할 수 있고 업력이 증명된 공식 법인 딜러를 거쳐 다이렉트 견적 상담을 이어 나가야 합니다.</p>
+
+    <h3>3. 오토캐시백 결제 제휴 및 인터넷 모의 계산의 필요성</h3>
+    <p>차량을 전액 혹은 일부 일시불 신용카드로 결제할 계획이라면 토스, 신한카드, 삼성카드 등 다양한 금융 플랫폼 및 어플에서 시행하는 오토캐시백 이벤트를 꼼꼼하게 살피는 것이 좋습니다. 결제 금액의 1.0%에서 많게는 2% 수준의 현금 지원금을 즉시 환급받을 수 있어 실질적인 차량 싼곳을 실현할 수 있습니다. 수입차 전용 견적 계산기나 네이버, 구글 검색을 통한 커뮤니티 시세 파악을 실시간으로 활용하여 출고 시 발생하는 잔여 세금 및 부대비용을 꼼꼼하게 대조해 보는 작업이 우선되어야 합니다.</p>
+  </section>
+
+  <section id="calc-section">
+    <h2>5. 2026 디스커버리 실구매가 및 금융 리스 모의 계산기</h2>
+    <p>차량 출고 단계에서 청구되는 총액을 실제와 가깝게 산출해 볼 수 있는 인터랙티브 모의 견적 계산 시스템입니다. 원하시는 디스커버리 세부 모델을 선정하시고 예상 할인 금액과 초기 자금 수준을 입력하면 실제 청구되는 취등록세 비용과 다이렉트 할부 원금, 그리고 가상의 월 납입 요금까지 즉각적으로 연산되어 나타납니다.</p>
+
+    <div class="calculator-box">
+      <div class="calculator-title">디스커버리 실구매가 및 월 납입금 실시간 모의 계산</div>
+      <form id="quote-calc-form" onsubmit="return false;">
+        <div class="input-section">
+          
+          <div class="input-group">
+            <label for="calc-model">선택 차량 모델 트림</label>
+            <select id="calc-model" required>
+              <option value="sport-p250-s" selected>2026 디스커버리 스포츠 P250 S (7,690만 원)</option>
+              <option value="sport-p250-landmark">2026 디스커버리 스포츠 P250 Landmark (8,110만 원)</option>
+              <option value="all-new-p300-s">2026 올 뉴 디스커버리 P300 S (9,950만 원)</option>
+              <option value="all-new-d350-hse">2026 올 뉴 디스커버리 D350 Dynamic HSE (1억 3,070만 원)</option>
+              <option value="all-new-p360-hse">2026 올 뉴 디스커버리 P360 Dynamic HSE (1억 3,360만 원)</option>
+              <option value="all-new-p360-tempest">2026 올 뉴 디스커버리 P360 Tempest Edition (1억 3,980만 원)</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="calc-discount">예상 딜러십 프로모션 할인 적용 (원 단위 입력)</label>
+            <input type="number" id="calc-discount" min="0" value="7000000" step="500000" placeholder="예: 7,000,000">
+          </div>
+
+          <div class="input-group">
+            <label for="calc-down-payment">선수율 / 초기 인수 보증금 (%)</label>
+            <select id="calc-down-payment">
+              <option value="0">무보증 / 무선수 (0%)</option>
+              <option value="10">10%</option>
+              <option value="20">20%</option>
+              <option value="30" selected>30%</option>
+              <option value="40">40%</option>
+              <option value="50">50%</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="calc-period">금융 실행 기간 (개월)</label>
+            <select id="calc-period">
+              <option value="36" selected>36 개월</option>
+              <option value="48">48 개월</option>
+              <option value="60">60 개월</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="calc-rate">예상 할부/리스 이율 (연 %)</label>
+            <input type="number" id="calc-rate" min="0" max="20" step="0.1" value="5.5">
+          </div>
+
+        </div>
+      </form>
+
+      <div class="calc-result">
+        <div class="calc-result-row">
+          <span>선택 모델 공식 MSRP:</span>
+          <span id="res-base-price">0 원</span>
+        </div>
+        <div class="calc-result-row">
+          <span>적용된 프로모션 금액:</span>
+          <span id="res-discount" style="color: #c0392b;">0 원</span>
+        </div>
+        <div class="calc-result-row">
+          <span>최종 인수 차량 공급가:</span>
+          <span id="res-net-price">0 원</span>
+        </div>
+        <div class="calc-result-row">
+          <span>예상 취등록세 (기본 7% 일괄 반영):</span>
+          <span id="res-tax">0 원</span>
+        </div>
+        <div class="calc-result-row">
+          <span>초기 인도 필요금 (인수 보증금 + 취등록세 등):</span>
+          <span id="res-initial-cost" style="color: #0f3b2e; font-weight: 700;">0 원</span>
+        </div>
+        <div class="calc-result-row total">
+          <span>예상 매월 금융 할부/리스 원리금 납부 요금:</span>
+          <span id="res-monthly">0 원</span>
+        </div>
+        <div class="calc-result-row" style="font-size: 0.9rem; margin-top: 15px; color: #7f8c8d;">
+          <span>※ 위 견적 시뮬레이션은 사용자의 이해를 돕기 위한 보편적 모의 연산이며, 금융사별 잔존 가치 부여율 및 우대 금리 변동 등에 따라 딜러 지점의 제안서 내용과 실제 차이가 발생할 수 있습니다.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>6. 자주 묻는 질문 (FAQ)</h2>
+    <div class="item">
+      <h3>Q1: 2026년형 랜드로버 디스커버리의 전반적인 가격 변동 추세는 어떠한가요?</h3>
+      <div class="content">
+        <p>A: 2026년형 올 뉴 디스커버리는 사양 업그레이드와 쾌적한 피비 프로 탑재 등으로 이전 연식 대비 기본 공식 출고가가 모델 등급에 따라 소폭 조율되었습니다. 다만 제조사의 재고 정책 및 딜러사 전속 금융 결합 프로모션 상황에 따라 공식 할인과 비공식적인 수입차 성지 현금지원 폭이 매월 탄력적으로 변동하므로 실 가성비 측면에서는 큰 이점이 남아있습니다.</p>
+      </div>
+    </div>
+    <div class="item">
+      <h3>Q2: 수입차 구매 시 장기렌트와 자동차 리스 중 어떤 세무 상품 설계가 유리한가요?</h3>
+      <div class="content">
+        <p>A: 개인 또는 법인 사업자의 세금 공제 한도는 연간 최대 일정 수준 내로 대동소이합니다. 그러나 번호판의 프라이버시가 중요하며 개인 보험 경력을 유지하고 싶다면 '하, 허, 호' 번호판을 사용하지 않는 리스를 선택하시는 것을 권합니다. 반면 건강보험료 상승 부담을 없애고 잦은 운행으로 주행 거리가 많아 타이어 소모 및 사고 이력 감가를 피하고 싶다면 비용 처리가 직관적인 장기렌트 계약 가입을 훨씬 추천해 드립니다.</p>
+      </div>
+    </div>
+    <div class="item">
+      <h3>Q3: 올 뉴 디스커버리 3.0 가솔린 P360 모델과 2.0 P300 모델의 가장 큰 차이점은 무엇인가요?</h3>
+      <div class="content">
+        <p>A: 가장 큰 차이점은 엔진 기통수와 최고출력, 그리고 마일드 하이브리드(MHEV) 시스템 유무입니다. P360 모델은 직렬 6기통 3.0리터 엔진과 MHEV 기술이 적용되어 한층 세련된 가속감과 360마력의 넉넉한 출력을 자랑합니다. 반면 P300 모델은 4기통 2.0리터 가솔린 터보 엔진으로 출력이 300마력이지만 복합 세무 혜택 및 유류대 관리 비용에서 상대적인 가성비 장점이 있습니다.</p>
+      </div>
+    </div>
+    <div class="item">
+      <h3>Q4: 비공식 성지 대리점의 고액 할인 프로모션 견적은 신뢰할 수 있나요?</h3>
+      <div class="content">
+        <p>A: 온라인 포털 네이버나 구글의 동호회 카페 등을 통해 전달받는 파격적인 성지 좌표 및 비공식 견적들은 기본적으로 딜러사들의 월간 마감 영업 수수료를 고객에게 돌려주는 리베이트 구조를 지니고 있습니다. 이러한 구조는 합법적인 시장 경쟁의 일환이지만, 종종 지나친 미끼 견적 제안 후 터무니없는 부대비용 및 고이율 금융 계약 가입을 유도하는 중개 브로커가 개입하는 경우가 있으므로 신용 있는 공식 메이저 에이전트 브랜드를 거쳐 상담받으셔야 안전합니다.</p>
+      </div>
+    </div>
+    <div class="item">
+      <h3>Q5: 국산 프리미엄 패밀리 SUV 대표 차종인 제네시스 GV80과 직접 비교했을 때 장단점은?</h3>
+      <div class="content">
+        <p>A: 제네시스 GV80은 수리 편의성 및 실내 화려한 디지털 인터페이스 옵션에서 뚜렷한 장점이 있으며 국내 관리 면에서 최고의 인기를 자랑합니다. 하지만 오프로더의 헤리티지와 도강 능력, 차체 강성, 그리고 고유한 3열 7인승 좌석 설계의 공간 효율성과 하이클래스 에어 서스펜션에서 느껴지는 중후한 주행 안전성과 브랜드 고유 이미지 측면에서는 랜드로버 올 뉴 디스커버리가 확실한 독자적 우세를 보입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="consulting">
+    <h2>7. 디스커버리 다이렉트 최저가 비교 견적 및 맞춤형 컨설팅 신청</h2>
+    <p>랜드로버 전문 출고 경력을 보유한 탑 에이전트와 공식 딜러 네트워크를 통하여, 전국 가용한 실시간 재고 조회와 최저 금리의 장기렌트, 자동차 리스, 그리고 현금 일시불 캐시백을 망라한 1:1 개인화 견적 서비스를 무상으로 제공합니다. 아래의 문의 정보를 성실히 입력해 주시면 확인 후 신속하고 투명하게 회신해 드리겠습니다.</p>
+    
+    <form action="/submit-quote-request" method="post" aria-label="디스커버리 최저가 견적 문의">
+      <div class="input-section">
+        
+        <div class="input-group">
+          <label for="cust-name">신청 고객 성함 (실명)</label>
+          <input type="text" id="cust-name" name="name" placeholder="예: 홍길동" required>
+        </div>
+
+        <div class="input-group">
+          <label for="cust-tel">고객 실연락처</label>
+          <input type="tel" id="cust-tel" name="phone" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" placeholder="예: 010-1234-5678" required>
+        </div>
+
+        <div class="input-group">
+          <label for="cust-model">희망 디스커버리 모델 구분</label>
+          <select id="cust-model" name="vehicle_model" required>
+            <option value="" disabled selected>구매 또는 문의를 원하시는 차종을 선택하세요</option>
+            <option value="ds-p250-s">디스커버리 스포츠 P250 S</option>
+            <option value="ds-p250-landmark">디스커버리 스포츠 P250 Landmark Edition</option>
+            <option value="and-p300-s">올 뉴 디스커버리 P300 S (2.0 가솔린)</option>
+            <option value="and-d350-hse">올 뉴 디스커버리 D350 Dynamic HSE (3.0 디젤)</option>
+            <option value="and-p360-hse">올 뉴 디스커버리 P360 Dynamic HSE (3.0 가솔린)</option>
+            <option value="and-p360-tempest">올 뉴 디스커버리 P360 Tempest Edition</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="cust-finance">구매 예정 방식 구분</label>
+          <select id="cust-finance" name="finance_type" required>
+            <option value="" disabled selected>희망하시는 결제 수단을 선택하세요</option>
+            <option value="cash">현금 일시불 및 오토캐시백</option>
+            <option value="install">다이렉트 할부 금융</option>
+            <option value="lease">수입차 운용 리스 (개인/법인)</option>
+            <option value="rent">장기렌트 요금제 이용</option>
+          </select>
+        </div>
+
+        <div class="input-group full-width">
+          <label for="cust-desc">상세 문의 희망 사항 (할인율 적용 시기, 타사 비교 견적, 현재 보유 차량 대차 등)</label>
+          <textarea id="cust-desc" name="message" placeholder="현재 받아 보신 타 딜러사의 실구매 견적이 있으시거나 원하시는 신차 사은품 패키지 범위, 출고 희망 월(즉시 출고 포함) 등을 상세히 기록해 주시면 한층 정확한 컨설팅 답변을 작성하는 데 매우 유용합니다."></textarea>
+        </div>
+
+        <div class="input-group full-width" style="flex-direction: row; align-items: center; gap: 10px;">
+          <input type="checkbox" id="privacy-agree" required style="width: 20px; height: 20px; cursor: pointer;">
+          <label for="privacy-agree" style="margin-bottom: 0; cursor: pointer; font-size: 0.9rem; color: #555;">개인정보의 수집 및 이용 목적에 동의합니다. (작성하신 인적 사항은 오직 견적 회신과 유선 및 문자 안내 목적으로만 안전하게 사용됩니다.)</label>
+        </div>
+
+      </div>
+      <button type="submit" class="cta-btn">무료 맞춤형 컨설팅 및 최저가 견적 신청하기</button>
+    </form>
+  </section>
+
+  <section id="resources">
+    <h2>8. 신뢰할 수 있는 공식 참고 외부 웹사이트 및 정보망</h2>
+    <p>랜드로버 차량 가치와 공식 출시 데이터, 보험 혜택 및 자동차 구매 시 꼭 거쳐야 할 검증 자료들을 투명하게 다루는 외부 대표 기관 목록입니다.</p>
+    <ul>
+      <li><a href="https://directncheckn.koreahankang.com" class="external-link" target="_blank" rel="noopener">실시간 수입차 프로모션 및 모의견적 전문 정보망 (reliabledone.com)</a></li>
+      <li><a href="https://namu.wiki/w/%EB%9E%9C%EB%93%9C%EB%A1%9C%EB%B2%84%20%EB%94%94%EC%8A%A4%EC%BB%A4%EB%B2%84%EB%A6%AC%20%EC%8A%A4%ED%8F%AC%EC%B8%A0" class="external-link" target="_blank" rel="noopener">나무위키 - 랜드로버 디스커버리 스포츠 상세 역사 및 세대별 히스토리 정보</a></li>
+      <li><a href="https://www.landrover.co.kr" class="external-link" target="_blank" rel="noopener">재규어 랜드로버 코리아 - 한국 공식 웹사이트 및 시승 예약 안내</a></li>
+    </ul>
+  </section>
+
+  
+
+  <!-- Chart.js Library Initialization for Interactive Visual Graphic -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('discoveryPriceChart').getContext('2d');
+    const discoveryPriceChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['디스커버리 스포츠 P250 S', '디스커버리 스포츠 Landmark', '올 뉴 디스커버리 P300 S', '디스커버리 D350 HSE', '디스커버리 P360 HSE', '디스커버리 P360 Tempest'],
+        datasets: [{
+          label: '2026년형 권장 소비자 가격 (단위: 만 원)',
+          data: [7690, 8110, 9950, 13070, 13360, 13980],
+          backgroundColor: [
+            'rgba(209, 161, 83, 0.7)',
+            'rgba(209, 161, 83, 0.85)',
+            'rgba(15, 59, 46, 0.65)',
+            'rgba(15, 59, 46, 0.8)',
+            'rgba(15, 59, 46, 0.9)',
+            'rgba(15, 59, 46, 1.0)'
+          ],
+          borderColor: [
+            '#b58d3d',
+            '#b58d3d',
+            '#0f3b2e',
+            '#0f3b2e',
+            '#0f3b2e',
+            '#0f3b2e'
+          ],
+          borderWidth: 1.5,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return '권장 판매가: ' + context.parsed.y.toLocaleString() + '만 원';
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false,
+            min: 6000,
+            ticks: {
+              stepSize: 1500,
+              callback: function(value) {
+                return value.toLocaleString() + '만 원';
+              }
+            },
+            grid: {
+              color: '#f0f4f2'
+            }
+          },
+          x: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+  
